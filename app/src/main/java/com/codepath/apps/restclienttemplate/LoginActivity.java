@@ -22,6 +22,7 @@ public class LoginActivity extends OAuthLoginActionBarActivity<TwitterClient> {
 		setContentView(R.layout.activity_login);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+		getSupportActionBar().setDisplayShowTitleEnabled(false);
 
 		final SampleModel sampleModel = new SampleModel();
 		sampleModel.setName("CodePath");

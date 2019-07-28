@@ -2,29 +2,35 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/container"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:layout_margin="5dp"
-    android:background="#19ADD2">
+    android:layout_height="match_parent"
+    android:background="#19ADD2"
+    tools:context=".DetailsActivity">
+
+    <include
+        layout="@layout/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"/>
 
     <ImageView
         android:id="@+id/ivProfileImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentRight="false"
-        android:layout_marginRight="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
         tools:srcCompat="@tools:sample/avatars[0]" />
 
     <TextView
         android:id="@+id/tvScreenName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="false"
-        android:layout_toRightOf="@id/ivProfileImage"
-        android:gravity="center|center_horizontal"
-        android:text="FadjiaJ "
+        android:layout_below="@id/ivProfileImage"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:gravity="center|center_vertical"
+        android:text="FadjiaJ"
         android:textSize="24sp"
         android:textStyle="bold" />
 
@@ -33,7 +39,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvScreenName"
-        android:layout_toRightOf="@id/ivProfileImage"
         android:autoLink="all"
         android:linksClickable="true"
         android:text="This is my tweet"

@@ -33,6 +33,7 @@ private SwipeRefreshLayout swipeContainer;
         setContentView(R.layout.activity_timeline);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
       //  getSupportActionBar().setDisplayShowHomeEnabled(true);
        // getSupportActionBar().setLogo(R.drawable.logo);
        // getSupportActionBar().setDisplayUseLogoEnabled(true);
@@ -48,7 +49,7 @@ private SwipeRefreshLayout swipeContainer;
         rvTweets = findViewById(R.id.rvTweets);
         tweets= new ArrayList<>();
         adapter= new TweetsAdapter(this, tweets);
-        rvTweets.setLayoutManager(new LinearLayoutManager(this));
+        rvTweets.setLayoutManager(new LinearLayoutManager(this, RecyclerView.VERTICAL, false));
         rvTweets.setAdapter(adapter);
         populateHomeTimeline();
 
